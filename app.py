@@ -12,10 +12,28 @@ transactions = [
 ]
 
 # Read operation
-@app.route('/')
-def run():
-    return "hello"
+@app.route('/get_transactions')
+def get_transactions():
+    return render_template('transactions.html')
+
 # Create operation
+@app.route('/add', methods=['GET', 'POST'])
+def add_transaction():
+    if request.method == 'POST':
+        date = request.form['date']
+        amount = request.form['amount']
+
+        transaction = {
+            'id': len(transactions) + 1,
+            'date': date,
+            'amount': amount
+        }
+
+        transactions.append(transaction)
+        # print(transactions)
+        return redirect(url_for('get_transactions'))
+
+    return render_template('form.html')
 
 # Update operation
 
