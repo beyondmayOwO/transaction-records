@@ -4,7 +4,7 @@ Practice project for developing CURD operation-capable web application using fla
 ## The functions
 Three separate web pages make up the application.
 
-![image](https://github.com/user-attachments/assets/77cf2ea7-ab7b-4922-bb6f-eefd2d81dcf9)
+![](demo.gif)
 
 ### View the transaction records
 The first one shows every transaction that has been logged. This page, titled Transaction Records, shows every transaction entry made in the system. The option to modify or delete the available entries is also provided on this page. On this page, you can also choose to add an entry. 
